@@ -19,31 +19,45 @@ function App() {
     console.log(`this is my click value ${name}`);
     if (name === "Bob") {
       setAbout(profile[0]);
-    } else {
+    } else if (name === "Hunter") {
       setAbout(profile[1]);
+    } else {
+      setAbout(null);
     }
   };
 
-  return (
-    <div>
-      <div>
+  if (!about) {
+    return (
+      <div className="App">
+        <Background src={"./utbackground.jpg"} />
+
         <p>Click a button to see Hunter or Bob</p>
         <Button choose={handleClick} name={profile[0].name} />
         <Button choose={handleClick} name={profile[1].name} />
       </div>
-      {about ? (
-        <div className="App">
-          <Background src={"./utbackground.jpg"} />
-          <p>Single Page About Me</p>
-          <div>{about.name}</div>
-          <Picture picture={about.image} />
-          <Hobbies hobbiesList={about.hobbies} />
-          <Work workList={about.work} />
-          <Hobbies hobbiesList={about.edu} />
-        </div>
-      ) : null}
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div className="App">
+        <Background src={"./utbackground.jpg"} />
+
+        <p>Click a button to see Hunter or Bob</p>
+        <Button choose={handleClick} name={profile[0].name} />
+        <Button choose={handleClick} name={profile[1].name} />
+        <Button choose={handleClick} name="Click to Reset" />
+
+        <p>Single Page About Me</p>
+        <h1>
+          {about.name}
+        </h1>
+
+        <Picture picture={about.image} />
+        <Hobbies hobbiesList={about.hobbies} />
+        <Work workList={about.work} />
+        <Hobbies hobbiesList={about.edu} />
+      </div>
+    );
+  }
 }
 
 export default App;
