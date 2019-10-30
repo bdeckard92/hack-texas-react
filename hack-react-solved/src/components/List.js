@@ -1,11 +1,11 @@
 import React from "react";
 
 //console.log(hobbiesList);
-const Hobbies = props => {
+const List = props => {
   return (
     <div>
       <ul>
-        {props.hobbiesList.map((item, index) => {
+        {props.arrayList.map((item, index) => {
           return (
             <li key={index}>
               {item}
@@ -17,4 +17,4 @@ const Hobbies = props => {
   );
 };
 
-export default Hobbies;
+export default List;

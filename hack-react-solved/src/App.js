@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Hobbies from "./components/Hobbies";
-import Work from "./components/Work";
+import List from "./components/List";
+
 import Picture from "./components/Picture";
 import Button from "./components/Button";
 import Background from "./components/Background";
@@ -52,9 +52,9 @@ function App() {
         </h1>
 
         <Picture picture={about.image} />
-        <Hobbies hobbiesList={about.hobbies} />
-        <Work workList={about.work} />
-        <Hobbies hobbiesList={about.edu} />
+        <List arrayList={about.hobbies} />
+        <List arrayList={about.work} />
+        <List arrayList={about.edu} />
       </div>
     );
   }
