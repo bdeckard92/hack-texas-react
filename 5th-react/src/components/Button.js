@@ -3,7 +3,7 @@ import React from "react";
 const Button = props => {
   return (
     <div>
-      <button>
+      <button value={props.name} onClick={event => props.choose(event)}>
         Click to See A {props.name}
       </button>
     </div>
