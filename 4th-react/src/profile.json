@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Bob",
+    "hobbies": ["mountain bike", "Running", "Gains"],
+    "image": "/Bob.png",
+    "edu": ["Texas A&M", "University of Phoenix", "University of Texas"],
+    "work": ["US Army", "High School Teacher", "Prison", "The Home Depot"]
+  },
+
+  {
+    "name": "Hunter",
+    "hobbies": ["Improv", "Gains"],
+    "image": "/Bob.png",
+    "edu": ["School", "School", "School"],
+    "work": ["The Home Depot", "Amazon", "Redit", "The Home Depot"]
+  }
+]
