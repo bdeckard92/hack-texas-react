@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 import Background from "./components/Background";
 import profile from "./profile.json";
 import "./App.css";
 
 console.log(`This is my json object ${profile[0].name}`);
+
 function App() {
   const [about, setAbout] = useState();
   //want button to choose object from json file to set state and render from that file.
@@ -12,8 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Background src={"./utbackground.jpg"} />
-      <p>Single Page About Me</p>
+      <Background src={"./utbackground.jpg"} /> <p> Single Page About Me </p>{" "}
     </div>
   );
 }
