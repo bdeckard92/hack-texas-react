@@ -8,7 +8,6 @@ import "./App.css";
 function App() {
   const [about, setAbout] = useState();
   //want button to choose object from json file to set state and render from that file.
-  console.log(profile);
 
   return (
     <div className="App">
